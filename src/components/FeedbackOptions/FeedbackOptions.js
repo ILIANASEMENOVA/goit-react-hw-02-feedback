@@ -1,3 +1,5 @@
+import FeedbackOptionsStyle from './FeedbackOptions.styled';
+
 export const FeedbackOptions = ({ options, onLeaveFeedback }) => {
   const keys = Object.keys(options);
 
@@ -10,9 +12,9 @@ export const FeedbackOptions = ({ options, onLeaveFeedback }) => {
   ));
   return (
     <>
-      <div>
+      <FeedbackOptionsStyle>
         <ul>{buttonsList}</ul>
-      </div>
+      </FeedbackOptionsStyle>
     </>
   );
 };

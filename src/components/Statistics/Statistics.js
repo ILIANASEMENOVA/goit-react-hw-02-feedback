@@ -1,3 +1,5 @@
+import { ListFeedback } from './Statistics.styled';
+
 export const Statistics = ({ stats, total, positivePercentage }) => {
   const keys = Object.keys(stats);
   const statisticsList = keys.map(key => (
@@ -8,11 +10,11 @@ export const Statistics = ({ stats, total, positivePercentage }) => {
 
   return (
     <>
-      <div>
-        <ul>{statisticsList}</ul>
+      <ListFeedback>
+        {statisticsList}
         <p>Total: {total}</p>
         <p>Positive Feedback: {positivePercentage}%</p>
-      </div>
+      </ListFeedback>
     </>
   );
 };
